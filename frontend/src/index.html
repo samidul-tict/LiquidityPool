@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<title>Sample Project</title>
+<link rel="stylesheet" type="text/css" href="./index.css">
+
+<h1>Project LP</h1>
+
+<section>
+  <h2>ICO</h2>
+
+  <div>
+    SPC left to buy: <span id="ico_spc_left"></span>
+  </div>
+  <div>
+    Total contribution to ICO: <span id="total_contribution"></span>
+  </div>
+  <div>
+    My SPC: <span id="my_spc"></span>
+  </div>
+
+  <form id="toggle_transfer_fee">
+    <button type="submit">Toggle Transfer Fee</button>&nbsp;&nbsp;<span id="transfer_fee_status"></span>
+  </form>
+
+  <form id="ico_spc_buy">
+    Buy SPC
+    <input name="eth" value="0.001" autocomplete="off">
+    <button type="submit">Buy</button>
+  </form>
+</section>
+
+<section>
+  <h2>Pool</h2>
+
+  <div>
+    ETH balance: <span id="lp_eth_bal"></span>
+  </div>
+  <div>
+    SPC balance: <span id="lp_spc_bal"></span>
+  </div>
+  <div>
+    My LP Token: <span id="my_lp_token"></span>
+  </div>
+
+  <form id="lp_deposit">
+    Deposit for LP tokens <br>
+    <input name="eth" value="0.001" autocomplete="off"> ETH<br>
+    <input name="spc" value="0.005" autocomplete="off"> SPC<br>
+    <button type="submit">Deposit</button>
+  </form>
+
+  <form id="lp_withdraw">
+    Withdraw from pool <br>
+    <button type="submit">Withdraw All</button>
+  </form>
+</section>
+
+<section>
+  <h2>Trade</h2>
+
+  <div>
+    Error: <span id="error_msg" style="color: red"></span>
+  </div>
+
+  <form id="swap">
+    Trade SPC for ETH <br>
+    <input name="amount_in" value="0" autocomplete="off">&nbsp;&nbsp;<span id="swap_in_label">ETH</span>
+    <small id="switcher" style="text-decoration: underline; cursor: pointer;">swap</small>
+    <br>
+    <span id="swap_out_label">0 SPC</span><br>
+    <input name="min_amount_out" value="0" autocomplete="off"><br>
+    <button type="submit">Trade</button>
+  </form>
+</section>
+
+<script type="module" src="./index.js"></script>
